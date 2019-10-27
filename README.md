@@ -15,6 +15,8 @@ This Action for [firebase-tools](https://github.com/firebase/firebase-tools) ena
 
 * `PROJECT_PATH` - **Optional**. The path to `firebase.json` if it doesn't exist at the root of your repository. e.g. `./my-app`
 
+* `RUN_SHELL_COMMAND` - **Optional**. If defined, then run a arbitrary shell command (i.e. not just `firebase`)
+
 ## Example
 
 To authenticate with Firebase, and deploy to Firebase Hosting:
@@ -59,6 +61,8 @@ jobs:
           args: deploy --only hosting:prod
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          RUN_SHELL_COMMAND: "true"
+
 ```
 
 ## License
