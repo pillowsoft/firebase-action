@@ -17,7 +17,7 @@ if [ -n "$PROJECT_ID" ]; then
 fi
 
 if [ -n "$RUN_SHELL_COMMAND" ]; then
-    sh -c "$RUN_SHELL_COMMAND"
+    sh -c "$*"
 else
     sh -c "firebase $*"
 fi
