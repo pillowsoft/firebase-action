@@ -16,4 +16,9 @@ if [ -n "$PROJECT_ID" ]; then
     firebase use --add $PROJECT_ID
 fi
 
-sh -c "firebase $*"
+if [ -n "$RUN_SHELL_COMMAND" ]; then
+    sh -c "$RUN_SHELL_COMMAND"
+else
+    sh -c "firebase $*"
+fi
+
