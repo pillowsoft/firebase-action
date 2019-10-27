@@ -58,7 +58,7 @@ jobs:
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
-          args: deploy --only hosting:prod
+          args: firebase deploy --only hosting:prod
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
           RUN_SHELL_COMMAND: "true"
